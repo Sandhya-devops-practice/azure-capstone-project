@@ -96,8 +96,6 @@ The architecture is designed for **high availability, scalability, and fault tol
 
 ## 🌐 Application Gateway
 
-Two Application Gateways deployed:
-
 ### 1️⃣ Central US Application Gateway
 
 - Listener configured
@@ -141,37 +139,72 @@ Two Application Gateways deployed:
 ### 1️⃣ Update VM
 ```bash
 sudo apt update
+```
 
-2️⃣ Clone Repository
+### 2️⃣ Clone Repository
+```bash
 git clone https://github.com/azcloudberg/azproject.git
 cd azproject
-3️⃣ Configure Storage
+```
+
+### 3️⃣ Configure Storage
+```bash
 sudo nano config.py
+```
 
 (Add Storage Account Name + Access Key)
 
-4️⃣ Run Application
-VM1 → Home Page
-VM2 → Upload Page
+---
+
+### 4️⃣ Run Application
+
+- VM1 → Home Page
+- VM2 → Upload Page
+
+```bash
 sudo python3 app.py
-📤 File Upload Flow
-Open Traffic Manager DNS
-Navigate to:
+```
+
+---
+
+## 📤 File Upload Flow
+
+1. Open Traffic Manager DNS  
+2. Navigate to:
+
+```
 /upload
-Upload file
-File is stored in Azure Blob Storage
+```
 
-📷 Home Page:
+3. Upload file  
+4. File stored in Azure Blob Storage  
 
+---
 
-📷 Upload Page:
+## 📷 Application Screenshots
 
+### Home Page
+![Home Page](screenshots/home-page.png)
 
-📷 Flask Running:
+### Upload Page
+![Upload Page](screenshots/upload-page.png)
 
+### Flask Running
+![Flask App](screenshots/flask-app-running.png)
 
-🎯 Final Outcome
-Multi-region deployment working
-High availability achieved using Traffic Manager
-Secure file upload to Azure Blob Storage
-Fully functional Flask cloud application
+---
+
+## 🎯 Final Outcome
+
+- Multi-region deployment working  
+- High availability using Traffic Manager  
+- Secure file upload to Azure Blob Storage  
+- Fully functional Flask cloud application  
+
+---
+
+## ✅ Project Status
+
+✔ Completed Successfully  
+✔ End-to-end Azure Deployment  
+✔ Production-style architecture implemented  
