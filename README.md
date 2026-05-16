@@ -137,17 +137,24 @@ The architecture is designed for **high availability, scalability, and fault tol
 ## 🧪 Application Deployment Steps
 
 ### 1️⃣ Update VM
+
 ```bash
 sudo apt update
 ```
 
+---
+
 ### 2️⃣ Clone Repository
+
 ```bash
 git clone https://github.com/azcloudberg/azproject.git
 cd azproject
 ```
 
+---
+
 ### 3️⃣ Configure Storage
+
 ```bash
 sudo nano config.py
 ```
