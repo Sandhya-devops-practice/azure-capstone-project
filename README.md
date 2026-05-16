@@ -141,3 +141,37 @@ Two Application Gateways deployed:
 ### 1️⃣ Update VM
 ```bash
 sudo apt update
+
+2️⃣ Clone Repository
+git clone https://github.com/azcloudberg/azproject.git
+cd azproject
+3️⃣ Configure Storage
+sudo nano config.py
+
+(Add Storage Account Name + Access Key)
+
+4️⃣ Run Application
+VM1 → Home Page
+VM2 → Upload Page
+sudo python3 app.py
+📤 File Upload Flow
+Open Traffic Manager DNS
+Navigate to:
+/upload
+Upload file
+File is stored in Azure Blob Storage
+
+📷 Home Page:
+
+
+📷 Upload Page:
+
+
+📷 Flask Running:
+
+
+🎯 Final Outcome
+Multi-region deployment working
+High availability achieved using Traffic Manager
+Secure file upload to Azure Blob Storage
+Fully functional Flask cloud application
