@@ -20,6 +20,14 @@ The system supports:
 
 ---
 
+## 🧠 Challenges Faced
+
+- Initially faced issues while running the Flask application because Flask was not installed on the VM. This caused import errors when executing `app.py`.
+- Encountered Python `.py` runtime errors due to missing dependencies and incorrect configuration in `config.py`.
+- Resolved these issues by installing required packages and verifying the application setup before running the server.
+
+---
+
 ## 🧰 Prerequisites
 
 - 4 Virtual Machines
