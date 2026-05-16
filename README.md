@@ -2,29 +2,29 @@
 
 ## 📌 Project Overview
 
-This project demonstrates a complete end-to-end cloud web application deployed on **Microsoft Azure** using multiple services like:
+In this project, I built and deployed a cloud-based web application on **Microsoft Azure** using multiple services:
 
 - Flask Web Application
 - Azure Virtual Machines
 - Azure Virtual Networks (VNets)
 - VNet Peering
 - Azure Blob Storage
-- Application Gateway (Multi-region)
+- Application Gateway (Multi-region setup)
 - Traffic Manager (Global Load Balancing)
 
-The system supports:
+### 🎯 Key Features
 - Home page and Upload page hosted on VMs
-- File upload to Azure Blob Storage
-- High availability using multi-region deployment
-- Global routing using Traffic Manager
+- File upload functionality to Azure Blob Storage
+- High availability using multi-region architecture
+- Global traffic routing using Azure Traffic Manager
 
 ---
 
 ## 🧠 Challenges Faced
 
-- Initially faced issues while running the Flask application because Flask was not installed on the VM. This caused import errors when executing `app.py`.
-- Encountered Python `.py` runtime errors due to missing dependencies and incorrect configuration in `config.py`.
-- Resolved these issues by installing required packages and verifying the application setup before running the server.
+- Initially, the Flask application was not running because Flask was not installed on the VM, which caused import errors while executing `app.py`.
+- Faced Python runtime issues due to missing dependencies and incorrect configuration in `config.py`.
+- Resolved these issues by installing required dependencies and validating configuration before running the application successfully.
 
 ---
 
@@ -36,13 +36,13 @@ The system supports:
 - Azure Storage Account (Blob Storage)
 - 2 Application Gateways (Central US & West US)
 - Traffic Manager Profile
-- Flask application scripts
+- Flask application source code
 
 ---
 
 ## 🏗️ Architecture Overview
 
-The architecture is designed for **high availability, scalability, and fault tolerance**.
+This architecture is designed for **high availability, scalability, and fault tolerance** across regions.
 
 📷 Architecture Diagram:
 
@@ -61,7 +61,7 @@ The architecture is designed for **high availability, scalability, and fault tol
 
 - VNet-1 → Central US  
 - VNet-2 → West US  
-- VNet Peering configured between VNet-1 and VNet-2
+- VNet Peering configured between both VNets
 
 📷 VNet Peering:
 
@@ -71,11 +71,11 @@ The architecture is designed for **high availability, scalability, and fault tol
 
 ## 🖥️ Virtual Machines Setup
 
-### Central US
+### Central US Region
 - VM1 → Upload Page
 - VM2 → Home Page
 
-### West US
+### West US Region
 - VM1 → Upload Page
 - VM2 → Home Page
 
@@ -85,8 +85,8 @@ The architecture is designed for **high availability, scalability, and fault tol
 
 - Storage Type: Blob Storage
 - Container Name: `upload`
-- Access Level: Configured for public/static access
-- Static Error Page enabled using `error.html`
+- Access Level: Public/static access configured
+- Static error page enabled using `error.html`
 
 📷 Storage Account:
 
@@ -107,8 +107,8 @@ The architecture is designed for **high availability, scalability, and fault tol
 ### 1️⃣ Central US Application Gateway
 
 - Listener configured
-- Backend Pool added
-- Routing Rules configured
+- Backend Pool created
+- Routing rules configured
 
 📷 Overview:
 ![AG Overview](screenshots/application-gateway-overview.png)
@@ -126,15 +126,15 @@ The architecture is designed for **high availability, scalability, and fault tol
 
 ### 2️⃣ West US Application Gateway
 
-(Same configuration as Central US)
+Same configuration as Central US region.
 
 ---
 
 ## 🌍 Traffic Manager
 
-- Used for global routing between regions
+- Used for global traffic routing across regions
 - DNS-based load balancing
-- Ensures high availability
+- Ensures high availability and failover support
 
 📷 Traffic Manager:
 
@@ -149,24 +149,17 @@ The architecture is designed for **high availability, scalability, and fault tol
 sudo apt update
 ```
 
----
-
 ### 2️⃣ Clone Repository
 ```bash
 git clone https://github.com/azcloudberg/azproject.git
 cd azproject
 ```
 
----
-
 ### 3️⃣ Configure Storage
 ```bash
 sudo nano config.py
 ```
-
-(Add Storage Account Name + Access Key)
-
----
+(Add Storage Account Name and Access Key)
 
 ### 4️⃣ Run Application
 
@@ -183,13 +176,11 @@ sudo python3 app.py
 
 1. Open Traffic Manager DNS  
 2. Navigate to:
-
 ```
 /upload
 ```
-
-3. Upload file  
-4. File stored in Azure Blob Storage    
+3. Upload a file  
+4. File gets stored in Azure Blob Storage  
 
 ---
 
@@ -202,21 +193,21 @@ sudo python3 app.py
 ![Upload Page](screenshots/upload-page.png)
 
 ### Flask Running
-![Flask App](screenshots/flask-app-running.png)
+![Flask App Running](screenshots/flask-app-running.png)
 
 ---
 
 ## 🎯 Final Outcome
 
-- Multi-region deployment working  
-- High availability using Traffic Manager  
+- Multi-region deployment successfully implemented  
+- High availability achieved using Traffic Manager  
 - Secure file upload to Azure Blob Storage  
-- Fully functional Flask cloud application  
+- Fully functional Flask-based cloud application  
 
 ---
 
 ## ✅ Project Status
 
-✔ Completed Successfully  
-✔ End-to-end Azure Deployment  
+✔ Successfully Completed  
+✔ End-to-End Azure Deployment  
 ✔ Production-style architecture implemented  
