@@ -137,7 +137,6 @@ The architecture is designed for **high availability, scalability, and fault tol
 ## 🧪 Application Deployment Steps
 
 ### 1️⃣ Update VM
-
 ```bash
 sudo apt update
 ```
@@ -145,7 +144,6 @@ sudo apt update
 ---
 
 ### 2️⃣ Clone Repository
-
 ```bash
 git clone https://github.com/azcloudberg/azproject.git
 cd azproject
@@ -154,7 +152,6 @@ cd azproject
 ---
 
 ### 3️⃣ Configure Storage
-
 ```bash
 sudo nano config.py
 ```
@@ -165,8 +162,8 @@ sudo nano config.py
 
 ### 4️⃣ Run Application
 
-- VM1 → Home Page
-- VM2 → Upload Page
+- VM1 → Home Page  
+- VM2 → Upload Page  
 
 ```bash
 sudo python3 app.py
@@ -184,7 +181,7 @@ sudo python3 app.py
 ```
 
 3. Upload file  
-4. File stored in Azure Blob Storage  
+4. File stored in Azure Blob Storage    
 
 ---
 
